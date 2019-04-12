@@ -1,0 +1,22 @@
+<div style="display:flex;flex-direction:column;justify-content:center;height:100%">
+	<div style="display: flex;justify-content:flex-end;">
+		<div style="margin:0 auto 0 40;">
+			<a href="/">Index</a>
+		</div>
+		{{#username}}
+			<div style="margin:0 40 0 40">
+				<a href="profile?username={{username}}">{{username}}</a>
+			</div>
+		{{/username}}
+		<div style="margin:0 40 0 40">
+			{{#username}}
+				<a href="javascript:;" onclick="logout()">Logout</a>
+			{{/username}}
+			{{^username}}
+				<a href="login">Login</a>
+			{{/username}}
+		</div>
+	</div>
+</div>
+
+<script src="/js/header.js"></script>
